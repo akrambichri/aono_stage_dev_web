@@ -1,14 +1,13 @@
 <template>
   <div id="Navrbar">
     <!-- Logo -->
-		<img class="logo" src="../assets/logo.png" width="80" >
+		<img class="logo" src="../assets/logo.png" width="60" >
     <!-- Nav Links -->
     <nav class="navMenu" :style="[userStyles.navMenu, menuDirection, menuWidth]">
-      <a href="javscript:void(0)" class="closebtn" @click.prevent="closeMenu">&times;</a>
+      <a href="javscript:void(0)" class="closebtn" @click.prevent="closeMenu"><i class="arrow left icon" style="font-size:24px;"></i></a>
       <template v-if="links.length">
-        <!-- <a v-for="link in links" :key="link.id" :href="link.url" :style="link.styles">{{ link.text }}</a> -->
         <router-link class="spacing" v-for="link in links" v-bind:key="link.id" :to="`${link.page}`" :style="link.styles">
-            <a :key="link.id" :href="link.page" :style="link.styles">{{ link.text }}</a>
+            <p>-----------------------</p> <a :key="link.id" :href="link.page" :style="link.styles">{{ link.text }}</a>
         </router-link>
       </template>
       <slot v-else />

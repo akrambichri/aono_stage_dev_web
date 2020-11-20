@@ -3,7 +3,7 @@
     <Chargement v-if="loader" />
     <div class="data">
       <router-link class="spacing" v-bind:key="1" :to="{ name: 'FormMatch' }" >      
-         <button class="mini ui blue button">Add Matche</button>
+         <button class="ui inverted green button"><i class="plus icon" style="font-size:18px;"></i>Ajouter un nouveau match</button>
       </router-link>
       <table class="ui celled table">
         <thead>

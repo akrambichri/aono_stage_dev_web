@@ -5,12 +5,12 @@
     <td>{{ equipe.UpComingMatch &&  equipe.UpComingMatch.location + " / "+equipe.UpComingMatch.match_date}}</td>
     <td>{{ equipe.record }}</td>
     <td>
-
-      <router-link class="spacing" v-bind:key="1" :to="{ name: 'FormEquipe', params: {equipe:{...equipe,isEdit:true} } }" >      
-         <button class="mini ui blue button" @click="onEdit">Edit</button>
-      </router-link>
-
-      <button class="mini ui red button" @click="onDelete">Delete</button>
+        <div class="action-cell">
+            <router-link class="spacing" v-bind:key="1" :to="{ name: 'FormEquipe', params: {equipe:{...equipe,isEdit:true} } }" >      
+                <button class="ui inverted blue button" @click="onEdit"><i class="edit icon"></i>Éditer</button>
+            </router-link>
+            <button class="ui inverted red button" @click="onDelete"><i class="trash alternate icon"></i>Supprimer</button>
+        </div>
     </td>
   </tr>
 </template>

@@ -7,13 +7,13 @@
     <td>{{ match.first_team &&  match.first_team.team_name + " / "+match.first_team.record}}</td>
     <td>{{ match.second_team &&  match.second_team.team_name + " / "+match.second_team.record}}</td>
 
-    <td>
-
-      <router-link class="spacing" v-bind:key="1" :to="{ name: 'FormMatch', params: {match:{...match,isEdit:true} } }" >      
-         <button class="mini ui blue button" @click="onEdit">Edit</button>
-      </router-link>
-
-      <button class="mini ui red button" @click="onDelete">Delete</button>
+    <td style="font-size:18px;">
+        <div class="action-cell">
+            <router-link class="spacing" v-bind:key="1" :to="{ name: 'FormMatch', params: {match:{...match,isEdit:true} } }" >      
+                <button class="ui inverted blue button" @click="onEdit"><i class="edit icon"></i>Éditer</button>
+            </router-link>
+            <button class="ui inverted red button" @click="onDelete"><i class="trash alternate icon"></i>Supprimer</button>
+        </div>
     </td>
   </tr>
 </template>
