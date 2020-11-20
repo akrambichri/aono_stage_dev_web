@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Equipe routes
 Route::get('equipes', 'Api\EquipeController@index');
-Route::get('equipes/matches', 'Api\EquipeController@index');
+Route::get('equipes/matches', 'Api\EquipeController@getTeamsWithUpcomingMatch');
 Route::get('equipes/{id}', 'Api\EquipeController@show');
 Route::post('equipes', 'Api\EquipeController@store');
 Route::put('equipes/{id}', 'Api\EquipeController@update');
