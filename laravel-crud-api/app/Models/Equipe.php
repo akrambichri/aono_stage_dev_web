@@ -14,8 +14,6 @@ class Equipe extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-    protected $dateFormat = 'yyyy-MM-ddThh:mm:ss.SSS';
-
     protected $dates = ['deleted_at','created_at','updated_at','match_date'];
 
     protected $fillable = [
