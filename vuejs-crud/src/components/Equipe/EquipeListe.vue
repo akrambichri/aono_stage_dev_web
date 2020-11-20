@@ -76,7 +76,7 @@ export default {
       this.loader = false;
     },
     onDelete(id) {
-      var result = confirm("Want to delete?");
+      var result = confirm("Êtes-vous sûr de vouloir supprimer cet enregistrement ?");
       if (result) {
         this.Delete(id);
       }

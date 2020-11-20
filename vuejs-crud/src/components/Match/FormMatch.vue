@@ -61,7 +61,7 @@ export default {
       first_team_id:{},
       second_team_id:{},
       equipes:[],
-      btnName: "Save",
+      btnName: "Sauvegarder",
       btnClass: "ui primary button submit-button"
     };
   },
@@ -100,7 +100,7 @@ export default {
         window.console.log("form ", this.form);
 
         // change the button to save
-        this.btnName = "Save";
+        this.btnName = "Sauvegarder";
         this.btnClass = "ui primary button submit-button";
 
         //send data
@@ -115,27 +115,27 @@ export default {
     formValidation() {
       
       if (document.getElementsByName("location")[0].value === "") {
-        alert("Enter location");
+        alert("Veuillez saisir L'emplacement");
         return false;
       }
 
       if (document.getElementsByName("match_date")[0].value === "") {
-        alert("Enter match_date");
+        alert("Veuillez saisir La date du match");
         return false;
       }
 
       if (this.first_team_id === null) {
-        alert("Enter first_team");
+        alert("Veuillez sélectionner la première équipe");
         return false;
       }
 
       if (this.second_team_id === null) {
-        alert("Enter second_team");
+        alert("Veuillez sélectionner la deuxième équipe");
         return false;
       }
 
       if (this.second_team_id === this.first_team_id) {
-        alert("Don't choose same team");
+        alert("S'il vous plaît, ne choisissez pas la même équipe !");
         return false;
       }
 
@@ -156,7 +156,7 @@ export default {
       // this.form.match_date = this.form.match_date;
        this.selected_first_team = this.first_team_id = this.match.first_team.id;
        this.selected_second_team = this.second_team_id = this.match.second_team.id;
-       this.btnName = "Update";
+       this.btnName = "Mise à jour";
        this.btnClass = "ui orange button submit-button";
     }
   }

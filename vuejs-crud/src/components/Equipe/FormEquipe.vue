@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       form:{},
-      btnName: "Save",
+      btnName: "Sauvegarder",
       btnClass: "ui primary button submit-button"
     };
   },
@@ -57,7 +57,7 @@ export default {
         window.console.log("form ", this.form);
 
         // change the button to save
-        this.btnName = "Save";
+        this.btnName = "Sauvegarder";
         this.btnClass = "ui primary button submit-button";
 
         //send data
@@ -71,12 +71,12 @@ export default {
 
     formValidation() {
       if (document.getElementsByName("team_name")[0].value === "") {
-        alert("Enter team name");
+        alert("Veuillez saisir le nom de l'équipe");
         return false;
       }
 
       if (document.getElementsByName("record")[0].value === "") {
-        alert("Enter record");
+        alert("Veuillez saisir le record de l'équipe");
         return false;
       }
 
@@ -90,7 +90,7 @@ export default {
   mounted(){
     if(this.equipe){
        this.form = this.equipe;
-       this.btnName = "Update";
+       this.btnName = "Mise à jour";
        this.btnClass = "ui orange button submit-button";
     }
   }

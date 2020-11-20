@@ -9,7 +9,7 @@
         <thead>
           <tr>
             <th style="width: 50px; text-align: center;">#</th>
-            <th>Location</th>
+            <th>L'emplacement</th>
             <th>Scores</th>
             <th>Date du match</th>
             <th>Première équipe</th>
@@ -78,7 +78,7 @@ export default {
       this.loader = false;
     },
     onDelete(id) {
-      var result = confirm("Want to delete?");
+      var result = confirm("Êtes-vous sûr de vouloir supprimer cet enregistrement ?");
       if (result) {
         this.Delete(id);
       }
