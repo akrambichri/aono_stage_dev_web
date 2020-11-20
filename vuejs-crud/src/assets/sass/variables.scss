@@ -1,0 +1,24 @@
+// Typography
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+$font-family-sans-serif: "Titillium Web", sans-serif;
+
+// Background
+$background-color: #673ab7;
+
+// Hamburger icon colors
+$menu-icon-color: #020202;
+
+// Menu colors
+$menu-background: #52be8c;
+$menu-text: #ffffff;
+$menu-text-hover: #e0e0e0;
+
+// Export Styles
+:export {
+  background: {
+    color: $background-color;
+  }
+  menu: {
+    icon-color: $menu-icon-color;
+  }
+}
